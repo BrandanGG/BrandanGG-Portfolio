@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 22px;
+}
+
+body {
+    overflow-x: hidden;
+    display:flex;
+    flex-direction: column;
+}
+
+/* Start of Nav Bar */
+nav{
+    position: fixed;
+    top: 0vh;
+    width: 100%;
+    z-index: 100;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 25px 0 0;
+    overflow: hidden;
+    background-color: #d95050;
+    display:flex;
+    justify-content: end;
+  }
+  
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2.5vh 3vw;
+    text-decoration: none;
+  }
+
+li a:hover {
+    font-size: 1.3rem;
+    max-height: 7.5vh;
+    font-weight: bold;
+}
+/* end of nav bar
+start of welcome section */
+.gray-bg {
+    height: 100vh;
+    background: linear-gradient(45deg, #4a4949 25%, #2e2e2e);
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    position: absolute;
+    height: 40%;
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-top: 80px;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.sub-title {
+    color: crimson;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+/* Elements for the name animation */
+.flip {
+    position: relative;
+}
+
+.flip span {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    animation: flash 3s infinite;
+    animation-delay: calc(.2s * var(--i));
+}
+/* end of name
+Start of developer and it tech stack */
+.tech-stack, #it-stack {
+    position: absolute;
+    bottom: 25px;
+    height: 65%;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px 100px;
+}
+
+.flex {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.dev-title {
+    grid-row: 1;
+    grid-column: 1/5;
+    font-size: 2rem;
+    text-align: center;
+    color: darkgray;
+}
+
+.tech {
+    margin-top: -50px;
+    text-align: center;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item-bg {
+    width:85%;
+    height: 85%;
+    background-color: darkgray;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8%;
+    perspective: 1000px;
+}
+
+.grid-item-bg img {
+    aspect-ratio: 16/9;
+}
+
+.grid-item-bg:hover {
+    height: 100%;
+    width: 100%;
+}
+
+.grid-item-bg img:hover {
+    position: absolute;
+    aspect-ratio: 18/11;
+}
+
+
+/*End of Stack
+Start of projects*/
+#projects {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(130deg, white, lightgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-bg {
+    height: 31%;
+    width: 75%;
+    background: #ADD8E6;
+    position: absolute;
+    display: flex;
+}
+
+.top-left {
+    margin-right: 10%;
+    margin-bottom: 30%;
+}
+
+.middle {
+    margin-left: 10%;
+}
+
+.bottom-right {
+    margin-top: 30%;
+    margin-right: 10%;
+}
+
+.right {
+    margin-left: 50%;
+    width: 50%;
+}
+
+.left {
+    margin-right: 50%;
+    width: 50%;
+}
+
+.div-padding {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-padding button{
+    margin: auto;
+    height:75px;
+    width: 200px;
+    background: lightgray;
+    cursor: pointer;
+}
+/* End of Projects */
+/* Start of Contact */
+#socials {
+    background: #fcfcde; 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 75%;
+    text-align: center;
+}
+
+.personal-box, .socials-box {
+    width: 50%;
+    height: 100%;
+}
+
+.socials-box {
+    display: flex;
+}
+
+.social-img {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+}
+
+.socials-box a {
+    margin: auto;
+    width: 10%;
+}
+
+button a {
+    width: 100%;
+    height: 100%;
+}
+
+.project-tile {
+    font-size: 1.5rem;;
+}
+
+/* animation */
+
+@keyframes flash {
+    0%,
+  100% {
+    color: crimson;
+    filter: blur(1px);
+    text-shadow: 0 0 10px crimson, 0 0 20px crimson, 0 0 30px crimson,
+      0 0 40px crimson, 0 0 60px crimson, 0 0 80px crimson, 0 0 100px crimson,
+      0 0 120px crimson;
+  }
+
+  15%,
+  95% {
+    filter: blur(0);
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 400px) {
+    nav {
+        display: hidden;
+    }
+}
